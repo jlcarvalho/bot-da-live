@@ -10,9 +10,9 @@ const { commands, timers } = require('./commands');
 const db = levelup(leveldown('./mydb'));
 
 const client = new tmi.Client({
-  channels: ['444jeans'],
+  channels: [process.env.CHANNEL],
   identity: {
-    username: 'CriaDoFourzinho',
+    username: process.env.TWITCH_BOT,
     password: process.env.TWITCH_TOKEN,
   },
 });
@@ -49,6 +49,6 @@ timers.forEach((timer) => {
 
     if (!response) return;
 
-    client.say('444jeans', response);
+    client.say(process.env.CHANNEL, response);
   });
 });
