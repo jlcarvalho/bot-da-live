@@ -1,0 +1,29 @@
+{
+  "name": "bot-da-live",
+  "version": "0.0.1",
+  "description": "A simple bot app built on Node.js.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "leveldown": "^6.1.0",
+    "levelup": "^5.1.1",
+    "lodash": "^4.17.21",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^2.6.6",
+    "sound-play": "^1.1.0",
+    "tmi.js": "^1.8.5"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "nodemon": "^2.0.15"
+  }
+}
