@@ -39,6 +39,7 @@ client.on('message', async (channel, user, message, self) => {
 
     client.say(channel, response);
   } catch (e) {
+    // eslint-disable-next-line
     console.log('Função run não definida!');
   }
 });
