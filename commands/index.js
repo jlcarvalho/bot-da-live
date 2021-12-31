@@ -8,7 +8,6 @@ const tela = require('./_tela');
 
 // Timers
 const agua = require('./_agua');
-// const apoiase = require('./_apoiase');
 
 const commands = [
   cafe,
@@ -26,7 +25,6 @@ commands.push({
 
 const timers = [
   agua,
-  // apoiase,
 ];
 
 module.exports = {
