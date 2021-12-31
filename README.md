@@ -47,5 +47,6 @@ npm start
 
 ## [Live 3](https://www.twitch.tv/videos/1248226005)
 - [x] Começar a usar uma ferramenta de versionamento de código (git)
-- [] Descrever como usar o bot no README.md
-- [] Implementar testes automatizados
+- [x] Descrever como usar o bot no README.md
+- [x] Implementar git hooks para rodar o linter
+- [ ] Implementar testes automatizados
