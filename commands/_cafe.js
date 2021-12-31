@@ -1,3 +1,8 @@
+const pluralize = (word, count) => {
+  if (count === 1) return `${count} ${word}`;
+  return `${count} ${word}s`;
+};
+
 const getCounter = async ({ db }) => {
   try {
     const counter = await db.get('counter');
@@ -18,6 +23,6 @@ module.exports = {
   run: async ({ db }) => {
     const counter = await getCounter({ db });
 
-    return `Jeans já tomou ${counter} café`;
+    return `Jeans já tomou ${pluralize('café', counter)}`;
   },
 };
