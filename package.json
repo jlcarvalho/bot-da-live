@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "dotenv": "^10.0.0",
+    "express": "^4.17.2",
     "leveldown": "^6.1.0",
     "levelup": "^5.1.1",
     "lodash": "^4.17.21",
     "node-cron": "^3.0.0",
     "node-fetch": "^2.6.6",
+    "socket.io": "^4.4.0",
     "sound-play": "^1.1.0",
     "tmi.js": "^1.8.5"
   },

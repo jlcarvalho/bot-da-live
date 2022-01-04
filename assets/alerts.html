@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alertas da Twitch</title>
+
+  <link rel="stylesheet" href="/alerts.css">
+</head>
+<body>
+  <div id="alertbox">
+    <div class="container">
+      <div class="sign">
+          <div class="neon-blue"> <span class="neon-purple username">444Jeans</span> <br />acabou de se inscrever</div>
+       </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var alertbox = document.querySelector("#alertbox");
+    var usernameEl = document.querySelector(".username");
+    var socket = io();
+  
+    socket.on('subscription', function(msg) {
+      usernameEl.innerText = msg.username;
+      alertbox.style.display = 'block';
+
+      setTimeout(() => {
+        alertbox.style.display = 'none';
+        usernameEl.innerText = '';
+      }, 5000);
+    });
+
+    socket.on('resub', function(msg) {
+      console.log(msg);
+    });
+  </script>
+</body>
+</html>

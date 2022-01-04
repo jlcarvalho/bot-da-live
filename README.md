@@ -49,4 +49,12 @@ npm start
 - [x] Começar a usar uma ferramenta de versionamento de código (git)
 - [x] Descrever como usar o bot no README.md
 - [x] Implementar git hooks para rodar o linter
+
+## [Live 4](https://www.twitch.tv/videos/1253088445)
+- [x] Criar overlays baseados em eventos da live
+  - [x] Subs
+  - [ ] Bits
+  - [ ] Raids
+
+## Live 5
 - [ ] Implementar testes automatizados

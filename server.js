@@ -1,14 +1,28 @@
 require('dotenv').config();
 
 const tmi = require('tmi.js');
-const cron = require('node-cron');
 const levelup = require('levelup');
 const leveldown = require('leveldown');
+const http = require('http');
+const express = require('express');
+const { Server } = require('socket.io');
 
-const { commands, timers } = require('./commands');
+const Commands = require('./modules/commands');
+const Timers = require('./modules/timers');
+const Alerts = require('./modules/alerts');
 
 const db = levelup(leveldown('./mydb'));
 
+// Configurações de servidor http e sockets
+const SERVER_PORT = 3000;
+
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server);
+
+app.use(express.static('assets'));
+
+// Configurações de conexão do chat da Twitch
 const client = new tmi.Client({
   channels: [process.env.CHANNEL],
   identity: {
@@ -19,37 +33,11 @@ const client = new tmi.Client({
 
 client.connect();
 
-client.on('message', async (channel, user, message, self) => {
-  if (self || !message.startsWith('!')) return;
+// Instanciamento dos "módulos" do bot
+Commands({ client, db });
+Timers({ client, db });
+Alerts({ client, app, io });
 
-  const strippedMessage = message.slice(1);
-
-  const command = commands.find(
-    ({ trigger }) => (typeof trigger === 'string'
-      ? trigger === strippedMessage
-      : trigger.test(strippedMessage)),
-  );
-
-  if (!command) return;
-
-  try {
-    const response = await command.run({ user, message: strippedMessage, db });
-
-    if (!response) return;
-
-    client.say(channel, response);
-  } catch (e) {
-    // eslint-disable-next-line
-    console.log('Função run não definida!');
-  }
-});
-
-timers.forEach((timer) => {
-  cron.schedule(`*/${timer.frequency} * * * *`, async () => {
-    const response = await timer.run({ db });
-
-    if (!response) return;
-
-    client.say(process.env.CHANNEL, response);
-  });
+server.listen(SERVER_PORT, () => {
+  console.log(`Example app listening at http://localhost:${SERVER_PORT}`);
 });

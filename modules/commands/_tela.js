@@ -1,7 +1,7 @@
 const sound = require('sound-play');
 const path = require('path');
 
-const filePath = path.join(__dirname, '../assets/oia-tela.mp3');
+const filePath = path.join(__dirname, '../../assets/oia-tela.mp3');
 
 module.exports = {
   trigger: 'tela',
