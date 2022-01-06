@@ -13,9 +13,9 @@ git clone git@github.com:jlcarvalho/bot-da-live.git
 
 Para rodar o bot, faça uma cópia do arquivo `.env.sample` e salve como `.env` e adicione as variáveis de ambiente requeridas.
 
-`TWITCH_BOT` = Nome do usuário do bot
-`TWITCH_TOKEN` = Token de autenticação do bot, pode ser gerado em [https://twitchapps.com/tmi/](https://twitchapps.com/tmi/)
-`CHANNEL` = Nome de usuário do canal onde o bot irá rodar
+- `TWITCH_BOT` = Nome do usuário do bot
+- `TWITCH_TOKEN` = Token de autenticação do bot, pode ser gerado em [https://twitchapps.com/tmi/](https://twitchapps.com/tmi/)
+- `CHANNEL` = Nome de usuário do canal onde o bot irá rodar
 
 Após configurar as variáveis de ambiente, certique-se de que o Node.js está instalado, navegue até o diretório do projeto e rode:
 
@@ -53,6 +53,7 @@ npm start
 ## [Live 4](https://www.twitch.tv/videos/1253088445)
 - [x] Criar overlays baseados em eventos da live
   - [x] Subs
+  - [ ] Resubs
   - [ ] Bits
   - [ ] Raids
 
