@@ -5,16 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alertas da Twitch</title>
-
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
   <link rel="stylesheet" href="/alerts.css">
+
+  <script>
+    // <script> tag to fix the Chromium's Blink bug (https://lab.laukstein.com/bug/input)
+  </script>
 </head>
 <body>
   <div id="alertbox">
-    <div class="container">
-      <div class="sign">
-          <div class="neon-blue"> <span class="neon-purple username">444Jeans</span> <br />acabou de se inscrever</div>
-       </div>
-    </div>
+    <b class="username"></b> acabou de se inscrever!<br />
+    Seja bem vindo(a) 😎
   </div>
 
   <script src="/socket.io/socket.io.js"></script>
@@ -25,12 +30,14 @@
   
     socket.on('subscription', function(msg) {
       usernameEl.innerText = msg.username;
-      alertbox.style.display = 'block';
 
-      setTimeout(() => {
-        alertbox.style.display = 'none';
-        usernameEl.innerText = '';
-      }, 5000);
+      window.requestAnimationFrame(function() {
+        alertbox.style.opacity = '1';
+
+        setTimeout(() => {
+          alertbox.style.opacity = '0';
+        }, 8000);
+      });
     });
 
     socket.on('resub', function(msg) {
