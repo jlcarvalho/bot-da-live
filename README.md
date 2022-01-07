@@ -59,3 +59,14 @@ npm start
 
 ## Live 5
 - [ ] Implementar testes automatizados
+  - [ ] Lógica de controle dos comandos
+  - [ ] Comando !café
+  - [ ] Comando !dado
+  - [x] Comando !legal
+  - [x] Comando !patch
+  - [x] Comando !ping
+  - [x] Comando !tela
+  - [ ] Lógica de controle dos timers
+  - [ ] Timer água
+  - [ ] Alerts
+  - [ ] `server.js`
