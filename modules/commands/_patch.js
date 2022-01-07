@@ -11,8 +11,8 @@ module.exports = {
     });
 
     const versions = await response.json();
-    const latestVersion = versions[0].slice(0, 5);
+    const [majorVersion, minorVersion] = versions[0].split('.');
 
-    return `As notas de atualização do patch ${latestVersion} são https://teamfighttactics.leagueoflegends.com/pt-br/news/game-updates/notas-da-atualizacao-${latestVersion.replace('.', '-')}-do-teamfight-tactics/`;
+    return `As notas de atualização do patch ${majorVersion}.${minorVersion} são https://teamfighttactics.leagueoflegends.com/pt-br/news/game-updates/notas-da-atualizacao-${majorVersion}-${minorVersion}-do-teamfight-tactics/`;
   },
 };
