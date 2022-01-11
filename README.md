@@ -60,7 +60,7 @@ npm start
 ## [Live 5](https://www.twitch.tv/videos/1255177962)
 - [ ] Implementar testes automatizados
   - [ ] Lógica de controle dos comandos
-  - [ ] Comando !café
+  - [x] Comando !café
   - [ ] Comando !dado
   - [x] Comando !legal
   - [x] Comando !patch
