@@ -1,0 +1,21 @@
+name: CI
+on: [push]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.14
+
+      - name: Install node dependencies
+        run: npm install
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Run specs
+        run: npm run test
