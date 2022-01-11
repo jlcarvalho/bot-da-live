@@ -41,8 +41,8 @@ const Commands = ({ client, db }) => {
 
       client.say(channel, response);
     } catch (e) {
-    // eslint-disable-next-line
-    console.log('Função run não definida!');
+      // eslint-disable-next-line
+      console.log('Função run não definida!');
     }
   });
 };
