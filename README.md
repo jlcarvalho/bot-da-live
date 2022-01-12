@@ -57,9 +57,9 @@ npm start
   - [ ] Bits
   - [ ] Raids
 
-## [Live 5](https://www.twitch.tv/videos/1255177962)
-- [ ] Implementar testes automatizados
-  - [ ] Lógica de controle dos comandos
+## [Live 5](https://www.twitch.tv/videos/1255177962) e [Live 6](https://www.twitch.tv/videos/1260561259)
+- [x] Implementar testes automatizados
+  - [x] Lógica de controle dos comandos
   - [x] Comando !café
   - [ ] Comando !dado
   - [x] Comando !legal
