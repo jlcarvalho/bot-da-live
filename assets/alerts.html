@@ -17,31 +17,47 @@
   </script>
 </head>
 <body>
-  <div id="alertbox">
+  <div id="subscriptionBox">
     <b class="username"></b> acabou de se inscrever!<br />
     Seja bem vindo(a) 😎
   </div>
 
+  <div id="resubBox">
+    <b class="username"></b> acabou de renovar a inscrição!<br />
+    Obrigado(a) 😎
+  </div>
+
+
   <script src="/socket.io/socket.io.js"></script>
   <script>
-    var alertbox = document.querySelector("#alertbox");
+    var subscriptionBox = document.querySelector("#subscriptionBox");
+    var resubBox = document.querySelector("#resubBox");
     var usernameEl = document.querySelector(".username");
+
     var socket = io();
   
     socket.on('subscription', function(msg) {
       usernameEl.innerText = msg.username;
 
       window.requestAnimationFrame(function() {
-        alertbox.style.opacity = '1';
+        subscriptionBox.style.opacity = '1';
 
         setTimeout(() => {
-          alertbox.style.opacity = '0';
+          subscriptionBox.style.opacity = '0';
         }, 8000);
       });
     });
 
     socket.on('resub', function(msg) {
-      console.log(msg);
+      usernameEl.innerText = msg.username;
+
+        window.requestAnimationFrame(function() {
+          resubBox.style.opacity = '1';
+
+          setTimeout(() => {
+            resubBox.style.opacity = '0';
+          }, 8000);
+        });
     });
   </script>
 </body>
