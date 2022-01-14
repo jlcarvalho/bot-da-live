@@ -23,8 +23,7 @@
   </div>
 
   <div id="resubBox">
-    <b class="username"></b> acabou de renovar a inscrição!<br />
-    Obrigado(a) 😎
+    Obrigado pelo resub de <b class="months"></b> mes(es) <b class="username"></b>
   </div>
 
 
@@ -33,12 +32,13 @@
     var subscriptionBox = document.querySelector("#subscriptionBox");
     var resubBox = document.querySelector("#resubBox");
     var usernameEl = document.querySelector(".username");
+    var monthEl = document.querySelector(".months");
 
     var socket = io();
   
     socket.on('subscription', function(msg) {
       usernameEl.innerText = msg.username;
-
+      monthEl.innerText = msg.months
       window.requestAnimationFrame(function() {
         subscriptionBox.style.opacity = '1';
 
