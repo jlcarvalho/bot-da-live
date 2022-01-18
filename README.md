@@ -70,3 +70,7 @@ npm start
   - [ ] Timer água
   - [ ] Alerts
   - [ ] `server.js`
+
+## Live 7
+- [x] Implementar comando !video
+  - [x] Escrever testes do comando !video

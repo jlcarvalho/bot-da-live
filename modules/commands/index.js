@@ -4,6 +4,7 @@ const legal = require('./_legal');
 const patch = require('./_patch');
 const ping = require('./_ping');
 const tela = require('./_tela');
+const video = require('./_video');
 
 const commands = [
   cafe,
@@ -12,6 +13,7 @@ const commands = [
   patch,
   ping,
   tela,
+  video,
 ];
 
 commands.push({
