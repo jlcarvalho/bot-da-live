@@ -20,7 +20,8 @@
     "node-fetch": "^2.6.6",
     "socket.io": "^4.4.0",
     "sound-play": "^1.1.0",
-    "tmi.js": "^1.8.5"
+    "tmi.js": "^1.8.5",
+    "xml2js": "^0.4.23"
   },
   "engines": {
     "node": "12.x"
@@ -35,5 +36,10 @@
     "jest": "^27.4.7",
     "memdown": "^6.1.1",
     "nodemon": "^2.0.15"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(mp3|xml)$": "<rootDir>/assetsTransformer.js"
+    }
   }
 }

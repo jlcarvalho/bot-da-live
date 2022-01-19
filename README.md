@@ -61,7 +61,7 @@ npm start
 - [x] Implementar testes automatizados
   - [x] Lógica de controle dos comandos
   - [x] Comando !café
-  - [ ] Comando !dado
+  - [x] Comando !dado
   - [x] Comando !legal
   - [x] Comando !patch
   - [x] Comando !ping
@@ -70,3 +70,7 @@ npm start
   - [ ] Timer água
   - [ ] Alerts
   - [ ] `server.js`
+
+## Live 7
+- [x] Implementar comando !video
+  - [x] Escrever testes do comando !video

@@ -1,0 +1,82 @@
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+  <script />
+  <link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UCExyyYy6G8GUG7J4KdJsIhg" />
+  <id>yt:channel:UCExyyYy6G8GUG7J4KdJsIhg</id>
+  <yt:channelId>UCExyyYy6G8GUG7J4KdJsIhg</yt:channelId>
+  <title>Jean Lucas de Carvalho</title>
+  <link rel="alternate" href="https://www.youtube.com/channel/UCExyyYy6G8GUG7J4KdJsIhg" />
+  <author>
+    <name>Jean Lucas de Carvalho</name>
+    <uri>https://www.youtube.com/channel/UCExyyYy6G8GUG7J4KdJsIhg</uri>
+  </author>
+  <published>2011-08-06T23:40:06+00:00</published>
+  <entry>
+    <id>yt:video:cgvlWnAimnE</id>
+    <yt:videoId>cgvlWnAimnE</yt:videoId>
+    <yt:channelId>UCExyyYy6G8GUG7J4KdJsIhg</yt:channelId>
+    <title>Criando bots para Twitch com Javascript - Vídeo 01</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=cgvlWnAimnE" />
+    <author>
+      <name>Jean Lucas de Carvalho</name>
+      <uri>https://www.youtube.com/channel/UCExyyYy6G8GUG7J4KdJsIhg</uri>
+    </author>
+    <published>2022-01-18T21:00:13+00:00</published>
+    <updated>2022-01-18T21:00:14+00:00</updated>
+    <media:group>
+      <media:title>Criando bots para Twitch com Javascript - Vídeo 01</media:title>
+      <media:content url="https://www.youtube.com/v/cgvlWnAimnE?version=3" type="application/x-shockwave-flash" width="640" height="390" />
+      <media:thumbnail url="https://i4.ytimg.com/vi/cgvlWnAimnE/hqdefault.jpg" width="480" height="360" />
+      <media:description>Nessa nova série de vídeos nós vamos estudar como criar bots para Twitch usando Javascript. Um bot é um software programado para executar determinadas tarefas e normalmente são utilizados para executar tarefas repetitivas. Essa série de vídeos tem sido gravada na Twitch todas terças e quintas às 19h e terão vários vídeos sobre o tema onde estudamos desde a interação com chat da Twitch até testes automatizados para garantir a qualidade do seu código. Então, ao invés de responder qual o seu YouTube sempre que alguém te pergunta no seu chat, que tal criar um bot com um comando !youtube? Espero que gostem. ► http://remix.jeanlucas.com.br/ ► https://www.twitch.tv/444jeans ► https://twitter.com/444Jeans</media:description>
+      <media:community>
+        <media:starRating count="1" average="5.00" min="1" max="5" />
+        <media:statistics views="1" />
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:7PPzPOEQdXc</id>
+    <yt:videoId>7PPzPOEQdXc</yt:videoId>
+    <yt:channelId>UCExyyYy6G8GUG7J4KdJsIhg</yt:channelId>
+    <title>REMIX Weekly em Vídeo - Edição Nº20</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=7PPzPOEQdXc" />
+    <author>
+      <name>Jean Lucas de Carvalho</name>
+      <uri>https://www.youtube.com/channel/UCExyyYy6G8GUG7J4KdJsIhg</uri>
+    </author>
+    <published>2022-01-10T22:30:00+00:00</published>
+    <updated>2022-01-10T22:37:22+00:00</updated>
+    <media:group>
+      <media:title>REMIX Weekly em Vídeo - Edição Nº20</media:title>
+      <media:content url="https://www.youtube.com/v/7PPzPOEQdXc?version=3" type="application/x-shockwave-flash" width="640" height="390" />
+      <media:thumbnail url="https://i4.ytimg.com/vi/7PPzPOEQdXc/hqdefault.jpg" width="480" height="360" />
+      <media:description>Agora voltamos de verdade com a REMIX. 🎉🎉🎉 E esses são os links que salvei nas últimas duas semanas (mesmo que alguns sejam mais antigos que isso) e, de modo geral, os temas continuam em torno de carreira e construção de audiência. Espero que gostem. ► http://remix.jeanlucas.com.br/ ► https://www.twitch.tv/444jeans ► https://twitter.com/444Jeans</media:description>
+      <media:community>
+        <media:starRating count="6" average="5.00" min="1" max="5" />
+        <media:statistics views="25" />
+      </media:community>
+    </media:group>
+  </entry>
+  <entry>
+    <id>yt:video:O93MW8Q4aDA</id>
+    <yt:videoId>O93MW8Q4aDA</yt:videoId>
+    <yt:channelId>UCExyyYy6G8GUG7J4KdJsIhg</yt:channelId>
+    <title>REMIX Weekly em Vídeo - Edição Nº19</title>
+    <link rel="alternate" href="https://www.youtube.com/watch?v=O93MW8Q4aDA" />
+    <author>
+      <name>Jean Lucas de Carvalho</name>
+      <uri>https://www.youtube.com/channel/UCExyyYy6G8GUG7J4KdJsIhg</uri>
+    </author>
+    <published>2022-01-07T18:41:41+00:00</published>
+    <updated>2022-01-07T19:11:45+00:00</updated>
+    <media:group>
+      <media:title>REMIX Weekly em Vídeo - Edição Nº19</media:title>
+      <media:content url="https://www.youtube.com/v/O93MW8Q4aDA?version=3" type="application/x-shockwave-flash" width="640" height="390" />
+      <media:thumbnail url="https://i4.ytimg.com/vi/O93MW8Q4aDA/hqdefault.jpg" width="480" height="360" />
+      <media:description>A REMIX é a minha newsletter onde compartilho uma coleção de links sobre assuntos variados todo sábado pela manhã. Nessa Edição Nº19 eu retorno a publicá-la quase 2 anos depois de sua última edição e, durante esse meio tempo, eu continuei a salvar links interessantes. Então nessa edição eu "me livro" desses links para poder continuar a partir da próxima edição com os novos links interessantes que eu for encontrando na minha jornada. Espero que gostem. ► http://remix.jeanlucas.com.br/ ► https://www.twitch.tv/444jeans ► https://twitter.com/444Jeans</media:description>
+      <media:community>
+        <media:starRating count="10" average="5.00" min="1" max="5" />
+        <media:statistics views="57" />
+      </media:community>
+    </media:group>
+  </entry>
+</feed>
