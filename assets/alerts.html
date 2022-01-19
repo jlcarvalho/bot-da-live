@@ -23,7 +23,7 @@
   </div>
 
   <div id="resubBox">
-    Obrigado pelo resub de <b class="months"></b> mes(es) <b class="username"></b>
+    Obrigado pelo resub de <b class="streakMonths"></b> meses <b class="username"></b>
   </div>
 
 
@@ -31,34 +31,32 @@
   <script>
     var subscriptionBox = document.querySelector("#subscriptionBox");
     var resubBox = document.querySelector("#resubBox");
-    var usernameEl = document.querySelector(".username");
-    var monthEl = document.querySelector(".months");
+    var streakMonths = document.querySelector(".streakMonths");
 
     var socket = io();
   
     socket.on('subscription', function(msg) {
+      var usernameEl = subscriptionBox.querySelector(".username");
       usernameEl.innerText = msg.username;
-      monthEl.innerText = msg.months
-      window.requestAnimationFrame(function() {
-        subscriptionBox.style.opacity = '1';
-
-        setTimeout(() => {
-          subscriptionBox.style.opacity = '0';
-        }, 8000);
-      });
+      animateBox(subscriptionBox)
     });
 
     socket.on('resub', function(msg) {
+      var usernameEl = resubBox.querySelector(".username");
       usernameEl.innerText = msg.username;
+      streakMonths.innerText = msg.months;
+      animateBox(resubBox)
+    });
 
-        window.requestAnimationFrame(function() {
-          resubBox.style.opacity = '1';
+    function animateBox(element, duration = 8000){
+      window.requestAnimationFrame(function() {
+        element.style.opacity = '1';
 
           setTimeout(() => {
-            resubBox.style.opacity = '0';
-          }, 8000);
+            element.style.opacity = '0';
+          }, duration);
         });
-    });
+    }
   </script>
 </body>
 </html>
