@@ -17,32 +17,51 @@
   </script>
 </head>
 <body>
-  <div id="alertbox">
+  <div id="subscriptionBox">
     <b class="username"></b> acabou de se inscrever!<br />
     Seja bem vindo(a) 😎
   </div>
 
+  <div id="cheerBox">
+    Obrigado pelos <b class="bits"></b> bits <b class="username"></b>!!!
+  </div>
+
   <script src="/socket.io/socket.io.js"></script>
   <script>
-    var alertbox = document.querySelector("#alertbox");
-    var usernameEl = document.querySelector(".username");
+    var subscriptionBox = document.querySelector("#subscriptionBox");
+    var cheerbox = document.querySelector("#cheerBox");
     var socket = io();
-  
+    
     socket.on('subscription', function(msg) {
+      var usernameEl = document.querySelector(".username");
       usernameEl.innerText = msg.username;
-
-      window.requestAnimationFrame(function() {
-        alertbox.style.opacity = '1';
-
-        setTimeout(() => {
-          alertbox.style.opacity = '0';
-        }, 8000);
-      });
+      
+      animateBox(subscriptionBox);
     });
 
     socket.on('resub', function(msg) {
       console.log(msg);
     });
+
+    socket.on('cheer', function(msg) {
+      var bitsEl = document.querySelector(".bits");
+      var usernameEl = document.querySelector(".username");
+
+      usernameEl.innerText = msg.username;
+      bitsEl.innerText = msg.bits;
+
+      animateBox(cheerbox);
+    });
+        
+    function animateBox(element, duration = 8000){
+      window.requestAnimationFrame(function() {
+        element.style.opacity = '1';
+        
+        setTimeout(() => {
+          element.style.opacity = '0';
+        }, duration);
+      });
+    }
   </script>
 </body>
 </html>
