@@ -8,7 +8,7 @@ body {
   font-size: 42px;
 }
 
-#alertbox {
+.alert {
   display: inline-block;
   padding: 20px 60px;
   background: rgb(24, 63, 233);
