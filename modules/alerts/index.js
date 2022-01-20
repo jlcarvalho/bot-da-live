@@ -18,7 +18,7 @@ const Alerts = ({ client, app, io }) => {
 
     client.on('cheer', (channel, user) => {
       client.say(channel, `Obrigado pelos ${user.bits} bits ${user['display-name']}!!!`);
-      socket.emit('resub', { username: user['display-name'], bits: user.bits });
+      socket.emit('cheer', { username: user['display-name'], bits: user.bits });
     });
 
     client.on('raided', (channel, username) => {
