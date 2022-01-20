@@ -17,46 +17,56 @@
   </script>
 </head>
 <body>
-  <div id="subscriptionBox" class="alert">
-    <b class="username"></b> acabou de se inscrever!<br />
-    Seja bem vindo(a) 😎
-  </div>
-
-  <div id="resubBox" class="alert">
-    Obrigado pelo resub de <b class="streakMonths"></b> meses <b class="username"></b>
-  </div>
-
+  <div class="alerts"></div>
 
   <script src="/socket.io/socket.io.js"></script>
-  <script>
-    var subscriptionBox = document.querySelector("#subscriptionBox");
-    var resubBox = document.querySelector("#resubBox");
-    var streakMonths = document.querySelector(".streakMonths");
-
-    var socket = io();
   
-    socket.on('subscription', function(msg) {
-      var usernameEl = subscriptionBox.querySelector(".username");
-      usernameEl.innerText = msg.username;
-      animateBox(subscriptionBox)
-    });
+  <script>
+    function appendAlertWithAnimation(element, duration = 8000){
+      alertsList.append(element);
 
-    socket.on('resub', function(msg) {
-      var usernameEl = resubBox.querySelector(".username");
-      usernameEl.innerText = msg.username;
-      streakMonths.innerText = msg.months;
-      animateBox(resubBox)
-    });
-
-    function animateBox(element, duration = 8000){
-      window.requestAnimationFrame(function() {
+      window.requestAnimationFrame(() => {
         element.style.opacity = '1';
 
+        setTimeout(() => {
+          element.style.opacity = '0';
+
+          // CSS animation time
           setTimeout(() => {
-            element.style.opacity = '0';
-          }, duration);
-        });
+            element.remove();
+          }, 1000);
+        }, duration);
+      })
     }
+
+    function createAlertBox(content) {
+      const alertBox = document.createElement('div');
+
+      alertBox.classList.add("alert");
+      alertBox.style.opacity = '0';
+      alertBox.innerHTML = content;
+
+      return alertBox;
+    }
+
+    const alertsList = document.querySelector(".alerts");
+    const socket = io();
+  
+    socket.on('subscription', (msg) => {
+      const subscriptionBox = createAlertBox(`<b>${msg.username}</b> acabou de se inscrever!<br /> Seja bem vindo(a) 😎`);
+
+      window.requestAnimationFrame(() => {
+        appendAlertWithAnimation(subscriptionBox)
+      });
+    });
+
+    socket.on('resub', (msg) => {
+      const resubBox = createAlertBox(`Obrigado pelo resub de <b>${msg.months}</b> meses <b>${msg.username}</b>`);
+
+      window.requestAnimationFrame(() => {
+        appendAlertWithAnimation(resubBox)
+      });
+    });
   </script>
 </body>
 </html>
