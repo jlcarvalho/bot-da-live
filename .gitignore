@@ -1,3 +1,4 @@
 mydb/
 node_modules/
+coverage/
 .env

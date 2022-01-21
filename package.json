@@ -38,6 +38,7 @@
     "nodemon": "^2.0.15"
   },
   "jest": {
+    "collectCoverage": true,
     "moduleNameMapper": {
       "\\.(mp3|xml)$": "<rootDir>/assetsTransformer.js"
     }
