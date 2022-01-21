@@ -66,6 +66,7 @@ npm start
   - [x] Comando !patch
   - [x] Comando !ping
   - [x] Comando !tela
+  - [x] Comando !comandos
   - [ ] Lógica de controle dos timers
   - [ ] Timer água
   - [ ] Alerts
