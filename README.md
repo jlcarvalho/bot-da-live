@@ -69,7 +69,7 @@ npm start
   - [ ] Lógica de controle dos timers
   - [ ] Timer água
   - [ ] Alerts
-  - [ ] `server.js`
+  - [x] `server.js`
 
 ## Live 7
 - [x] Implementar comando !video
