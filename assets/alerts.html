@@ -22,7 +22,7 @@
   <script src="/socket.io/socket.io.js"></script>
   
   <script>
-    function appendAlertWithAnimation(element, duration = 8000){
+    function appendAlertWithAnimation(element, duration = 8000) {
       alertsList.append(element);
 
       window.requestAnimationFrame(() => {
@@ -64,6 +64,14 @@
 
       window.requestAnimationFrame(() => {
         appendAlertWithAnimation(resubBox)
+      });
+    });
+
+    socket.on('cheer', function(msg) {
+      const cheerBox = createAlertBox(`Obrigado pelos ${msg.bits} bits ${msg.username}!!!`);
+
+      window.requestAnimationFrame(() => {
+        appendAlertWithAnimation(cheerBox)
       });
     });
   </script>
