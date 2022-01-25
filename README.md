@@ -66,10 +66,11 @@ npm start
   - [x] Comando !patch
   - [x] Comando !ping
   - [x] Comando !tela
+  - [x] Comando !comandos
   - [ ] Lógica de controle dos timers
   - [ ] Timer água
   - [ ] Alerts
-  - [ ] `server.js`
+  - [x] `server.js`
 
 ## Live 7
 - [x] Implementar comando !video
