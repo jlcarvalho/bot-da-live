@@ -4,18 +4,19 @@ const flushPromises = require('flush-promises');
 const Commands = require('./index');
 
 jest.mock('./_cafe', () => ({
+  alias: '!cafe, !café',
   trigger: /^caf(e|é)$/,
-  run: jest.fn().mockImplementation(() => 'some command response'),
+  run: jest.fn().mockReturnValue('some command response'),
 }));
 
 jest.mock('./_dado', () => ({
   trigger: 'dado',
-  run: jest.fn().mockImplementation(() => 'some command response'),
+  run: jest.fn().mockReturnValue('some command response'),
 }));
 
 jest.mock('./_legal', () => ({
   trigger: 'legal',
-  run: jest.fn().mockImplementation(() => 'some command response'),
+  run: jest.fn().mockReturnValue('some command response'),
 }));
 
 jest.mock('./_patch', () => ({
@@ -27,12 +28,17 @@ jest.mock('./_patch', () => ({
 
 jest.mock('./_ping', () => ({
   trigger: 'ping',
-  run: jest.fn().mockImplementation(() => 'some command response'),
+  run: jest.fn().mockReturnValue('some command response'),
 }));
 
 jest.mock('./_tela', () => ({
   trigger: 'tela',
-  run: jest.fn().mockImplementation(() => undefined),
+  run: jest.fn().mockReturnValue(undefined),
+}));
+
+jest.mock('./_video', () => ({
+  trigger: 'video',
+  run: jest.fn().mockReturnValue('some command response'),
 }));
 
 const say = jest.fn();
@@ -147,5 +153,18 @@ describe('Commands', () => {
 
     // eslint-disable-next-line
     expect(console.log).toBeCalledWith('Função run não definida!');
+  });
+
+  it('generate command !comandos with listing all other commands', async () => {
+    const channel = '444jeans';
+    const user = { 'display-name': 'cezarpretto' };
+    const message = '!comandos';
+    const self = false;
+
+    client.emit('message', channel, user, message, self);
+
+    await flushPromises();
+
+    expect(say).toBeCalledWith('444jeans', '!cafe, !café, !comandos, !dado, !legal, !patch, !ping, !tela, !video');
   });
 });
