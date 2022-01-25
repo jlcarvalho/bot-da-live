@@ -67,6 +67,14 @@
       });
     });
 
+    socket.on('raided', (msg) => {
+      const raidBox = createAlertBox(`Obrigado pela raid <b>${msg.username}</b>, sejam todos bem vindos!`);
+
+      window.requestAnimationFrame(() => {
+        appendAlertWithAnimation(raidBox)
+      })
+    })
+    
     socket.on('cheer', function(msg) {
       const cheerBox = createAlertBox(`Obrigado pelos ${msg.bits} bits ${msg.username}!!!`);
 
@@ -74,6 +82,7 @@
         appendAlertWithAnimation(cheerBox)
       });
     });
+
   </script>
 </body>
 </html>
